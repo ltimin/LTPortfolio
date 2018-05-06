@@ -1,0 +1,140 @@
+$theme-white: whitesmoke;
+$theme-yellow:#F9F938;
+$theme-blue: #03B7FF;
+$theme-tomato: #FF583D;
+$theme-green: #8CF233;
+$pastel-yellow: #FBFBB7;
+$pastel-blue: #63D3FF;
+$pastel-tomato: #FF9685;
+$pastel-green: #C5F899;
+$bang: Bangers;
+
+.about-theme {
+   font-size: 8vw;
+   text-shadow: 0 .5vh 2vw #5c5c5c58;
+   letter-spacing: 3px;
+   color: $theme-yellow;
+   font-family: $bang;
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   margin-top: 10vh;
+   align-items: center;
+   justify-content: space-evenly;
+   flex-direction: column;
+   .arrow-down{
+    animation: arrow-down 1.25s ease-in-out infinite;
+    cursor: pointer;
+    @keyframes arrow-down {
+        from {opacity: .2; transform: translateY(0px);
+        }50% { opacity: 1; transform: translateY(10px);}
+        to {opacity: .2; transform: translate(0px);}
+        }
+    }
+}
+#about-up {
+    height: 10px;
+    width: 10px;
+    transform: rotate(225deg);
+    position: relative;
+    top: -20vh;
+    right: -10vw;
+    opacity: .5;
+    z-index: 1;
+    border-color: black;
+    &:hover {
+        border-color:$theme-white;
+        cursor: pointer;
+    }
+}
+.who-i-am {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    #my-name{
+        font-family: Bangers;
+        color: $theme-yellow;
+        font-size: 2em;
+        letter-spacing: 4px;
+        display: flex;
+        text-shadow: 0px .5vh 2vw #5c5c5c58;;
+        align-self: flex-start;
+        margin-left: 10vw;
+        margin-top: -35vh;
+        height: 15vh;
+    }
+    #my-statement {
+        display: block;
+        flex-wrap: wrap;
+        margin-top: 5vh;
+        height: 30vh;
+        width: 80%;
+        font-size: 1.8em;
+        color: $theme-white;
+        letter-spacing: 2px;
+        align-self: center;
+        span {
+            color: $theme-yellow;
+        }
+        :nth-child(2) {
+            color: $pastel-blue;
+        }
+    }
+    .arrow-down{
+        position: relative;
+        top: 33%;
+        padding: 5px;
+        animation: arrow-down 1.25s ease-in-out infinite;
+        cursor: pointer;
+        @keyframes arrow-down {
+            from {opacity: .2; transform: translateY(0px);
+            }50% { opacity: 1; transform: translateY(10px);}
+            to {opacity: .2; transform: translate(0px);}
+            }
+        }
+}
+
+.recent-work {
+    height: 100vh;
+    width: 100vw;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .macBook {
+    align-self: flex-start;
+    margin-left: 5vw;
+    z-index: 1;
+    display: block;
+    #mac-img{
+        height: 75%;
+        width: 23vw;
+    }
+}
+    .work {
+    font-size: 7vw;
+    align-self: center;
+    text-align: center;
+    font-family: $bang;
+    color: $theme-white;
+    & a {
+    font-size: 3vw;
+    align-self: center;
+    font-weight: 100;;
+    border: 3px solid $theme-yellow;
+    padding: 10px 20px 10px 20px;
+    letter-spacing: 3px
+        }
+    }
+    .phone {
+        align-self: flex-end;
+        margin-right: 7vw;
+        #phone-img {
+        width: 14vw;
+        }
+    }
+}

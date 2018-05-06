@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: hidden;
+    margin: 20vh;
+    background-color: whitesmoke;
+    font: 20px "Lato", sans-serif;
+    color: black;
+}
+.container {
+    margin-left: -20px;
+    display: grid;
+    justify-self: left;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    'grid-content'
+}
+#name {
+    grid-area: grid-content;
+    justify-self: center;
+    z-index: -1;
+}
+#svgs {
+    z-index: 1;
+    margin-left: -500px;
+    margin-top: 100px;
+    grid-area: grid-content;
+    height: 250px;
+    width: 250px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    '. es6 htm ang sql . . .'
+    '. . . . button . . .'
+    '. rea css asp csh . . .';
+    justify-self: center;
+    grid-column-gap: 80px;
+    grid-row-gap: -10px;
+}
+#button {
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: -25px;
+    opacity: 0;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 2px;
+    grid-area: button;
+    width: 140px;
+    height: 40px;
+    animation: button 2s ease-in-out infinite;
+    animation-delay: 4s;
+    transition-delay: ease-in-out;
+    box-shadow: 0 10px 20px rgba(254, 254, 254, 0.3); 
+}
+#asp {
+    opacity: 0;
+    grid-area: asp;
+    animation: myAnimationBounceLeft1 5.8s ease-in-out;
+}
+#ang {
+    opacity: 0;
+    grid-area: ang;
+    animation: myAnimationBounceLeft1 5.7s ease-in-out;
+}
+#csh {
+    opacity: 0;
+    grid-area: csh;
+    animation: myAnimationBounceLeft2 5.6s ease-in-out;
+}
+#css {
+    opacity: 0;
+    grid-area: css;
+    animation: myAnimationBounceLeft1 5.5s ease-in-out;
+}
+#es6 {
+    opacity: 0;
+    grid-area: es6;
+    animation: myAnimationBounceLeft2 5.4s ease-in-out;
+}
+#rea {
+    opacity: 0;
+    grid-area: rea;
+    animation: myAnimationBounceLeft2 5s ease-in-out;
+}
+#htm {
+    opacity: 0;
+    margin-left: 10px;
+    grid-area: htm;
+    animation: myAnimationBounceLeft2 5.2s ease-in-out;
+}
+#sql {
+    opacity: 0;
+    grid-area: sql;
+    animation: myAnimationBounceLeft1 5.1s ease-in-out;
+}
+#l-1 {animation: myAnimationLetter1 4s ease-in-out;
+}#l-2 {animation: myAnimationLetter2 4.2s ease-in-out;
+}#l-3{animation: myAnimationLetter3 4.4s ease-in-out;
+}#l-4{animation: myAnimationLetter4 4.1s ease-in-out;
+}#l-5{animation: myAnimationLetter5 4.3s ease-in-out;
+}#l-6{animation: myAnimationLetter6 4s ease-in-out;
+}#l-7{animation: myAnimationLetter7 4.5s ease-in-out;
+}#l-8{animation: myAnimationLetter8 4.3s ease-in-out;}
+#last {
+    animation: myAnimationName 4.2s ease-in-out;
+}
+#dev {
+    z-index: -1;
+    font-weight: bold;
+    color: rgba(218, 5, 5, 0.94);
+    text-shadow: 1.2px 2px 3px rgba(75, 75, 75, 0.721); 
+    animation: myAnimationDev 4s ease-in-out;  
+}
+@keyframes myAnimationBounceLeft1 {
+    from {opacity: 1;transform: translate(-1000px, -90%) rotate(0deg);
+    }20% {transform: translate(-20px, 100px) rotate(180deg);
+    }30% {transform: translate(0px, -200px) rotate(360deg);
+    }40% {transform: translate(100px, 100px) rotate(500deg);
+    }50% {transform: translate(300px, -300px) rotate(700deg);
+    }60% {transform: translate(600px, 100px) rotate(850deg);
+    }70% {transform: translate(900px, -200px) rotate(1150deg);
+    }80% {transform: translate(1000px, 100px) rotate(1250deg);
+    }90% {transform: translate(1500px, -300px) rotate(1500deg);
+    }to {opacity: 1;transform: translate(2000px, 100px) rotate(1700deg);}
+}
+@keyframes myAnimationBounceLeft2 {
+    from {opacity: 1;transform: translate(-1000px, -200%) rotate(0deg);
+    }20% {transform: translate(-300px, 150px) rotate(180deg);
+    }30% {transform: translate(-200px, -200px) rotate(360deg);
+    }40% {transform: translate(-100px, 150px) rotate(500deg);
+    }50% {transform: translate(100px, -300px) rotate(700deg);
+    }60% {transform: translate(400px, 150px) rotate(950deg);
+    }70% {transform: translate(700px, -200px) rotate(1125deg);
+    }80% {transform: translate(900px, 150px) rotate(1350deg);
+    }90% {transform: translate(1300px, -300px) rotate(1500deg);
+    }to {opacity: 1;transform: translate(2000px, 150px) rotate(1700deg);}
+}
+@keyframes myAnimationName {
+    from {opacity: 0; transform:scale(0,0) translateX(3000px)
+    }
+    to {opacity: 1; transform:scale(1,1)translateX(0px)} 
+}
+@keyframes myAnimationDev {
+    from {opacity: 0;
+    }
+    to {opacity: 1;}
+}
+@keyframes button {
+    from {opacity: .2;
+    }50% { opacity: 1;}
+    to {opacity: .2;}
+}
+@keyframes myAnimationLetter1 {
+    from {opacity: -10;transform: scale(10,10) translateZ(500px)
+    }to {opacity: 1; transform: translate(0px, 0px) scale(1,1) translateZ(0)}
+}
+@keyframes myAnimationLetter2 {
+    from {opacity: -10;transform: translate(-500px, 2000px) scale(10,10) translateZ(500px)
+    }to {opacity: 1; transform: translate(0px, 0px) scale(1,1) translateZ(0)}
+}
+@keyframes myAnimationLetter3 {
+    from {opacity: -10;transform: translate(5000px, -200px) scale(10,10) translateZ(500px)
+    }to {opacity: 1; transform: translate(0px, 0px) scale(1,1) translateZ(0)}
+}
+@keyframes myAnimationLetter4 {
+    from {opacity: -10;transform: translate(-5000px, -500px) scale(10,10) translateZ(500px)
+    }to {opacity: 1; transform: translate(0px, 0px) scale(1,1) translateZ(0)}
+}
+@keyframes myAnimationLetter5 {
+    from {opacity: -10;transform: translate(500px, 5000px) scale(10,10) translateZ(500px)
+    }to {opacity: 1; transform: translate(0px, 0px) scale(1,1) translateZ(0)}
+}
+@keyframes myAnimationLetter6 {
+    from {opacity: -10;transform: translate(0px, 5000px) scale(10,10) translateZ(500px)
+    }to {opacity: 1; transform: translate(0px, 0px) scale(1,1) translateZ(0)}
+}
+@keyframes myAnimationLetter7 {
+    from {opacity: -10;transform: translate(0px, -5000px) scale(10,10) translateZ(500px)
+    }to {opacity: 1; transform: translate(0px, 0px) scale(1,1) translateZ(0)}
+}
+@keyframes myAnimationLetter8 {
+    from {opacity: -10;transform: scale(10,10) translateZ(-500px)
+    }to {opacity: 1; transform: scale(1,1) translateZ(0)}
+}
